@@ -27,8 +27,11 @@ return [
     'home' => 'Home',
 
     'username' => 'Username',
+    'username_helptext' => 'The username cannot be already taken and ' .
+        'must have at least 3 characters.',
     'password' => 'Password',
     'mail_address' => 'Mail address',
+    'mail_address_helptext' => 'not mandatory',
 
     'toggle_nav' => 'Toggle navigation',
 
@@ -86,6 +89,11 @@ return [
     'enable_login' => 'Unlock account',
     'reset_password' => 'Reset password',
     'delete_user' => 'Delete account',
+    'create_user' => 'Create account',
+    'privilege_user' => 'Change permissions',
+
+    'privilege_level_admin' => 'Administrator',
+    'privilege_level_default' => 'Default User',
 
     'modal_unhandled_error_title' => 'Unexpected Error',
     'modal_unhandled_error_text' => 'An unexpected error has occured. Below is some information about the error:',
@@ -100,6 +108,9 @@ return [
     'modal_reset_user_success' => 'The password of %1$s has been reset. The new password is:</p><p>%2$s',
     'modal_delete_user_question' => 'Would you like to delete the account of %1$s?</p><p>' .
         'Deleting the account will also delete related data!',
+    'modal_create_user_success' => 'The account for %1$s was created successfully.</p><p>' .
+        'Please tell %1$s their new password: %2$s',
+    'modal_privilege_user_content' => 'Select a permission level for %1$s:</p><p>%2$s',
 
     'datatable_decimal' => '.',
     'datatable_thousands' => ',',
@@ -134,4 +145,11 @@ return [
     'ajax_response_user_reset_yourself' => 'You cannot reset your own password.',
     'ajax_response_user_delete_yourself' => 'You cannot delete yourself.',
     'ajax_response_user_delete_protected' => 'This account is protected and cannot be deleted.',
+    'ajax_response_user_create_exists' => 'An account with the name "%1$s" already exists.',
+    'ajax_response_user_create_name_info' => 'The username cannot be empty and ' .
+        'must have at least 3 alphanumeric characters.',
+    'ajax_response_user_create_mail_invalid' => 'The provided email address is invalid.',
+    'ajax_response_user_privilege_yourself' => 'You cannot change your own permission level.',
+    'ajax_response_user_privilege_batch' => 'You cannot change the permission level of a Batch user.',
+    'ajax_response_user_privilege_protected' => 'The account is protected and cannot be changed.',
 ];
